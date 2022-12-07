@@ -8,7 +8,7 @@ const MoviesPage = () => {
     const [searchFilms, setSearchFilms] = useState([]);
     const [loading, setLoading] = useState(false);
     const [searchParams, setSearchParams] = useSearchParams();
-    const queryMovie = searchParams.get('query');
+    const queryMovie = searchParams.get('query') ?? '';
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -40,6 +40,13 @@ const MoviesPage = () => {
         </form>
         {loading && <Loader />}
         {searchFilms && <MoviesSearchList films={searchFilms}/>}
+        {searchFilms &&
+        searchFilms.length === 0 &&
+        (queryMovie ? (
+          <p>Nothing found!</p>
+        ) : (
+          <p>Please, enter request !</p>
+        ))}
        
     </main>
     );
