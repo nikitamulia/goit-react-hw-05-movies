@@ -27,7 +27,7 @@ const MovieDetailsPage = () => {
 
   return (
     <>
-      <Link to={location?.state?.from ?? '/movies'}>
+      <Link to={location?.state?.from ?? '/'}>
         <button type="button">
             Go back
         </button>

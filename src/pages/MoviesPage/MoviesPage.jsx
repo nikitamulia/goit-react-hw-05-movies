@@ -40,6 +40,7 @@ const MoviesPage = () => {
         </form>
         {loading && <Loader />}
         {searchFilms && <MoviesSearchList films={searchFilms}/>}
+       
     </main>
     );
     
