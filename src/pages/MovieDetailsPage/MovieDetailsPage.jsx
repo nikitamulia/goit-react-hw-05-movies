@@ -31,8 +31,8 @@ const MovieDetailsPage = () => {
   return (
     <>
       <Link to={backLinkHref}>
-        <button type="button" >
-            Go back
+        <button type="button">
+          Go back
         </button>
       </Link>
       {loading && <Loader />}
